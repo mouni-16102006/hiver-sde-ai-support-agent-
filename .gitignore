@@ -45,7 +45,7 @@ data/raw/*.csv
 Thumbs.db
 
 # Streamlit
-.streamlit/
+.streamlit/secrets.toml
 
 # Pytest / Coverage
 .pytest_cache/
