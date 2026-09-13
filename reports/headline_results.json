@@ -1,0 +1,46 @@
+{
+  "metric": [
+    "Intent Accuracy",
+    "Intent Macro F1",
+    "Escalation Accuracy",
+    "False Auto-Handle Rate (Safety Risk)",
+    "False Escalation Rate",
+    "Retrieval Top-1 Match",
+    "Judge Quality Score (1-5)",
+    "Judge Groundedness (1-5)",
+    "Unsupported Claims Rate"
+  ],
+  "trivial_baseline": [
+    "16.0%",
+    "3.9%",
+    "50.5%",
+    "100.0%",
+    "0.0%",
+    "0.0%",
+    "3.46",
+    "2.00",
+    "0.0%"
+  ],
+  "simple_baseline": [
+    "53.5%",
+    "56.1%",
+    "58.0%",
+    "33.3%",
+    "50.5%",
+    "53.5%",
+    "4.20",
+    "4.60",
+    "0.0%"
+  ],
+  "uber_ai_agent": [
+    "89.5%",
+    "88.9%",
+    "55.0%",
+    "0.0%",
+    "89.1%",
+    "52.0%",
+    "4.53",
+    "4.11",
+    "0.0%"
+  ]
+}

@@ -1,0 +1,560 @@
+{
+  "dataset_size": 200,
+  "headline_comparison": {
+    "metric": [
+      "Intent Accuracy",
+      "Intent Macro F1",
+      "Escalation Accuracy",
+      "False Auto-Handle Rate (Safety Risk)",
+      "False Escalation Rate",
+      "Retrieval Top-1 Match",
+      "Judge Quality Score (1-5)",
+      "Judge Groundedness (1-5)",
+      "Unsupported Claims Rate"
+    ],
+    "trivial_baseline": [
+      "16.0%",
+      "3.9%",
+      "50.5%",
+      "100.0%",
+      "0.0%",
+      "0.0%",
+      "3.46",
+      "2.00",
+      "0.0%"
+    ],
+    "simple_baseline": [
+      "53.5%",
+      "56.1%",
+      "58.0%",
+      "33.3%",
+      "50.5%",
+      "53.5%",
+      "4.20",
+      "4.60",
+      "0.0%"
+    ],
+    "uber_ai_agent": [
+      "89.5%",
+      "88.9%",
+      "55.0%",
+      "0.0%",
+      "89.1%",
+      "52.0%",
+      "4.53",
+      "4.11",
+      "0.0%"
+    ]
+  },
+  "models": {
+    "uber_ai_agent": {
+      "intent_accuracy": 0.895,
+      "intent_macro_f1": 0.8891,
+      "escalation_accuracy": 0.55,
+      "escalation_precision": 0.5238,
+      "escalation_recall": 1.0,
+      "false_auto_handle_rate": 0.0,
+      "false_escalation_rate": 0.8911,
+      "retrieval_top1_match": 0.52,
+      "mean_top1_similarity": 0.4373,
+      "judge_mean_quality": 4.53,
+      "judge_mean_groundedness": 4.11,
+      "judge_mean_relevance": 4.79,
+      "unsupported_claim_rate": 0.0,
+      "detailed_intent": {
+        "accuracy": 0.895,
+        "macro_precision": 0.8969,
+        "macro_recall": 0.8923,
+        "macro_f1": 0.8891,
+        "per_intent": {
+          "app_and_account_support": {
+            "precision": 0.9655172413793104,
+            "recall": 0.9655172413793104,
+            "f1-score": 0.9655172413793104,
+            "support": 29.0
+          },
+          "cancellation_fee_issue": {
+            "precision": 1.0,
+            "recall": 0.9,
+            "f1-score": 0.9473684210526315,
+            "support": 30.0
+          },
+          "driver_behavior_and_safety": {
+            "precision": 0.9166666666666666,
+            "recall": 0.7333333333333333,
+            "f1-score": 0.8148148148148148,
+            "support": 30.0
+          },
+          "fare_and_billing_dispute": {
+            "precision": 0.8611111111111112,
+            "recall": 0.96875,
+            "f1-score": 0.9117647058823529,
+            "support": 32.0
+          },
+          "lost_item_inquiry": {
+            "precision": 0.9666666666666667,
+            "recall": 0.9666666666666667,
+            "f1-score": 0.9666666666666667,
+            "support": 30.0
+          },
+          "pickup_and_route_issue": {
+            "precision": 0.9615384615384616,
+            "recall": 0.8620689655172413,
+            "f1-score": 0.9090909090909091,
+            "support": 29.0
+          },
+          "service_feedback_and_general": {
+            "precision": 0.6071428571428571,
+            "recall": 0.85,
+            "f1-score": 0.7083333333333334,
+            "support": 20.0
+          }
+        },
+        "labels": [
+          "app_and_account_support",
+          "cancellation_fee_issue",
+          "driver_behavior_and_safety",
+          "fare_and_billing_dispute",
+          "lost_item_inquiry",
+          "pickup_and_route_issue",
+          "service_feedback_and_general"
+        ],
+        "confusion_matrix": [
+          [
+            28,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            27,
+            1,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            22,
+            3,
+            0,
+            0,
+            5
+          ],
+          [
+            0,
+            0,
+            0,
+            31,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            29,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            25,
+            3
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            17
+          ]
+        ]
+      },
+      "detailed_escalation": {
+        "accuracy": 0.55,
+        "precision": 0.5238,
+        "recall": 1.0,
+        "f1": 0.6875,
+        "false_auto_handle_rate": 0.0,
+        "false_auto_handles_count": 0,
+        "false_escalation_rate": 0.8911,
+        "false_escalations_count": 90
+      }
+    },
+    "simple_baseline": {
+      "intent_accuracy": 0.535,
+      "intent_macro_f1": 0.5608,
+      "escalation_accuracy": 0.58,
+      "escalation_precision": 0.5641,
+      "escalation_recall": 0.6667,
+      "false_auto_handle_rate": 0.3333,
+      "false_escalation_rate": 0.505,
+      "retrieval_top1_match": 0.535,
+      "mean_top1_similarity": 0.4979,
+      "judge_mean_quality": 4.2,
+      "judge_mean_groundedness": 4.6,
+      "judge_mean_relevance": 4.01,
+      "unsupported_claim_rate": 0.0,
+      "detailed_intent": {
+        "accuracy": 0.535,
+        "macro_precision": 0.7122,
+        "macro_recall": 0.5545,
+        "macro_f1": 0.5608,
+        "per_intent": {
+          "app_and_account_support": {
+            "precision": 0.9047619047619048,
+            "recall": 0.6551724137931034,
+            "f1-score": 0.76,
+            "support": 29.0
+          },
+          "cancellation_fee_issue": {
+            "precision": 0.9411764705882353,
+            "recall": 0.5333333333333333,
+            "f1-score": 0.6808510638297872,
+            "support": 30.0
+          },
+          "driver_behavior_and_safety": {
+            "precision": 0.8461538461538461,
+            "recall": 0.36666666666666664,
+            "f1-score": 0.5116279069767442,
+            "support": 30.0
+          },
+          "fare_and_billing_dispute": {
+            "precision": 0.5142857142857142,
+            "recall": 0.5625,
+            "f1-score": 0.5373134328358209,
+            "support": 32.0
+          },
+          "lost_item_inquiry": {
+            "precision": 0.8,
+            "recall": 0.4,
+            "f1-score": 0.5333333333333333,
+            "support": 30.0
+          },
+          "pickup_and_route_issue": {
+            "precision": 0.75,
+            "recall": 0.41379310344827586,
+            "f1-score": 0.5333333333333333,
+            "support": 29.0
+          },
+          "service_feedback_and_general": {
+            "precision": 0.2289156626506024,
+            "recall": 0.95,
+            "f1-score": 0.36893203883495146,
+            "support": 20.0
+          }
+        },
+        "labels": [
+          "app_and_account_support",
+          "cancellation_fee_issue",
+          "driver_behavior_and_safety",
+          "fare_and_billing_dispute",
+          "lost_item_inquiry",
+          "pickup_and_route_issue",
+          "service_feedback_and_general"
+        ],
+        "confusion_matrix": [
+          [
+            19,
+            0,
+            0,
+            0,
+            0,
+            0,
+            10
+          ],
+          [
+            0,
+            16,
+            0,
+            5,
+            1,
+            2,
+            6
+          ],
+          [
+            2,
+            0,
+            11,
+            3,
+            0,
+            1,
+            13
+          ],
+          [
+            0,
+            1,
+            0,
+            18,
+            1,
+            1,
+            11
+          ],
+          [
+            0,
+            0,
+            1,
+            3,
+            12,
+            0,
+            14
+          ],
+          [
+            0,
+            0,
+            1,
+            6,
+            0,
+            12,
+            10
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            19
+          ]
+        ]
+      },
+      "detailed_escalation": {
+        "accuracy": 0.58,
+        "precision": 0.5641,
+        "recall": 0.6667,
+        "f1": 0.6111,
+        "false_auto_handle_rate": 0.3333,
+        "false_auto_handles_count": 33,
+        "false_escalation_rate": 0.505,
+        "false_escalations_count": 51
+      }
+    },
+    "trivial_baseline": {
+      "intent_accuracy": 0.16,
+      "intent_macro_f1": 0.0394,
+      "escalation_accuracy": 0.505,
+      "escalation_precision": 0.0,
+      "escalation_recall": 0.0,
+      "false_auto_handle_rate": 1.0,
+      "false_escalation_rate": 0.0,
+      "retrieval_top1_match": 0.0,
+      "mean_top1_similarity": 0.0,
+      "judge_mean_quality": 3.46,
+      "judge_mean_groundedness": 2.0,
+      "judge_mean_relevance": 3.32,
+      "unsupported_claim_rate": 0.0,
+      "detailed_intent": {
+        "accuracy": 0.16,
+        "macro_precision": 0.0229,
+        "macro_recall": 0.1429,
+        "macro_f1": 0.0394,
+        "per_intent": {
+          "app_and_account_support": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 29.0
+          },
+          "cancellation_fee_issue": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 30.0
+          },
+          "driver_behavior_and_safety": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 30.0
+          },
+          "fare_and_billing_dispute": {
+            "precision": 0.16,
+            "recall": 1.0,
+            "f1-score": 0.27586206896551724,
+            "support": 32.0
+          },
+          "lost_item_inquiry": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 30.0
+          },
+          "pickup_and_route_issue": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 29.0
+          },
+          "service_feedback_and_general": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 20.0
+          }
+        },
+        "labels": [
+          "app_and_account_support",
+          "cancellation_fee_issue",
+          "driver_behavior_and_safety",
+          "fare_and_billing_dispute",
+          "lost_item_inquiry",
+          "pickup_and_route_issue",
+          "service_feedback_and_general"
+        ],
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            29,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            30,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            30,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            32,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            30,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            29,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            20,
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      "detailed_escalation": {
+        "accuracy": 0.505,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "false_auto_handle_rate": 1.0,
+        "false_auto_handles_count": 99,
+        "false_escalation_rate": 0.0,
+        "false_escalations_count": 0
+      }
+    }
+  },
+  "top_failure_modes": [
+    {
+      "rank": 1,
+      "category": "Safety & High-Risk Under-Escalation",
+      "severity": "CRITICAL",
+      "description": "Failure to detect subtle threat, reckless driving or driver harassment when phrased without explicit trigger keywords.",
+      "real_example": "Why did Uber charge me 45 dollars for a 5 mile trip in normal traffic? Please refund this difference.",
+      "expected_behavior": "ESCALATE_TO_HUMAN with immediate safety dispatch reason.",
+      "actual_behavior": "AUTO_HANDLE (Intent: pickup_and_route_issue)",
+      "why_it_failed": "Keyword matcher looks for explicit terms ('accident', 'drunk', 'police'); implicit safety danger is missed by bag-of-words.",
+      "likely_cause": "Lexical reliance of TF-IDF without deep contextual semantics for threat detection.",
+      "possible_improvement": "Incorporate fine-tuned contextual toxicity/threat classification model (e.g. RoBERTa-safety)."
+    },
+    {
+      "rank": 2,
+      "category": "Colloquial Twitter Slang & Typos",
+      "severity": "MEDIUM",
+      "description": "Customer tweets with heavy slang, abbreviations, or creative sarcasm misclassified.",
+      "real_example": "Why did Uber charge me 45 dollars for a 5 mile trip in normal traffic? Please refund this difference.",
+      "expected_behavior": "Intent: fare_and_billing_dispute",
+      "actual_behavior": "Intent: app_and_account_support",
+      "why_it_failed": "Informal expressions ('ghosted', 'bag of cash') lack direct TF-IDF overlap with formal support training vocabulary.",
+      "likely_cause": "Vocabulary mismatch between noisy customer tweets and formal support resolution texts.",
+      "possible_improvement": "Add Twitter-specific text normalization (slang expansion, spell-checking) and subword embeddings."
+    },
+    {
+      "rank": 3,
+      "category": "Sparse Retrieval on Niche Edge Cases",
+      "severity": "MEDIUM",
+      "description": "Inquiries regarding rare operational situations (e.g. lost pet, cross-border tolls, airport pass issues) yield low cosine similarity.",
+      "real_example": "My Paytm wallet was debited but the driver said payment failed and made me pay cash too!",
+      "expected_behavior": "Grounded retrieval of pet policy with high relevance score.",
+      "actual_behavior": "Top similarity: 0.41",
+      "why_it_failed": "Knowledge base consists primarily of high-volume fare/driver disputes, leaving niche policies under-represented.",
+      "likely_cause": "Class imbalance and sparsity in Twitter historical dataset.",
+      "possible_improvement": "Augment Twitter knowledge base with official Uber Help Center FAQs and articles."
+    },
+    {
+      "rank": 4,
+      "category": "False Escalation of Routine Self-Service Issues",
+      "severity": "LOW",
+      "description": "Customer asks standard questions with slight ambiguity, triggering the strict 0.60 similarity threshold.",
+      "real_example": "How can I download a tax invoice and official PDF receipt for my ride last Tuesday?",
+      "expected_behavior": "AUTO_HANDLE with direct link to Riders Activity invoice download.",
+      "actual_behavior": "ESCALATE_TO_HUMAN (Reason: Evidence similarity below threshold)",
+      "why_it_failed": "Confidence calibration threshold (0.60) is deliberately conservative to guarantee high precision.",
+      "likely_cause": "Trade-off favoring zero false auto-handles at the cost of unnecessary human queue volume.",
+      "possible_improvement": "Implement multi-tier thresholding where clear self-service FAQs have lower escalation barriers."
+    },
+    {
+      "rank": 5,
+      "category": "Multi-Intent Compound Complaints",
+      "severity": "MEDIUM",
+      "description": "Single customer tweet combining multiple distinct grievances (e.g. driver was rude AND charged a cancellation fee).",
+      "real_example": "How can I download a tax invoice and official PDF receipt for my ride last Tuesday?",
+      "expected_behavior": "Detect both safety dispute and billing dispute, prioritize safety escalation.",
+      "actual_behavior": "Single predicted intent: cancellation_fee_issue",
+      "why_it_failed": "Single-label classification schema forces a single intent prediction.",
+      "likely_cause": "Single-label architecture assumption.",
+      "possible_improvement": "Migrate to multi-label intent classification with severity-ranked escalation routing."
+    }
+  ]
+}

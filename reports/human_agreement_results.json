@@ -1,0 +1,9 @@
+{
+  "status": "evaluated",
+  "sample_count": 25,
+  "exact_agreement_rate": 0.92,
+  "close_agreement_rate": 1.0,
+  "mean_absolute_error": 0.34,
+  "cohens_kappa": 0.8387,
+  "interpretation": "Substantial agreement"
+}

@@ -1,0 +1,1802 @@
+[
+  {
+    "id": "uber_gold_001",
+    "customer_message": "Why did Uber charge me 45 dollars for a 5 mile trip in normal traffic? Please refund this difference.",
+    "gold_intent": "fare_and_billing_dispute",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Address fare and billing dispute with proper Uber action path.",
+    "rationale": "Customer charged higher than expected fare; can be resolved via in-app fare review flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_002",
+    "customer_message": "I was charged twice on my credit card for the exact same ride from the airport!",
+    "gold_intent": "fare_and_billing_dispute",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Address fare and billing dispute with proper Uber action path.",
+    "rationale": "Duplicate billing transaction requires manual financial audit and refund processing.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_003",
+    "customer_message": "My Paytm wallet was debited but the driver said payment failed and made me pay cash too!",
+    "gold_intent": "fare_and_billing_dispute",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Address fare and billing dispute with proper Uber action path.",
+    "rationale": "Dual payment via wallet and cash requires manual account reconciliation.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_004",
+    "customer_message": "How can I download a tax invoice and official PDF receipt for my ride last Tuesday?",
+    "gold_intent": "fare_and_billing_dispute",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Address fare and billing dispute with proper Uber action path.",
+    "rationale": "Routine receipt download inquiry; standard self-service link.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_005",
+    "customer_message": "Driver did not turn off the meter when I got dropped off and I got billed for extra 20 mins.",
+    "gold_intent": "fare_and_billing_dispute",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Address fare and billing dispute with proper Uber action path.",
+    "rationale": "Trip end time discrepancy; standard in-app fare adjustment route.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_006",
+    "customer_message": "There is an unknown 15 dollar charge from Uber on my card and I haven't taken a ride in weeks.",
+    "gold_intent": "fare_and_billing_dispute",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Address fare and billing dispute with proper Uber action path.",
+    "rationale": "Potential credit card fraud or unauthorized charge requiring fraud investigation.",
+    "is_safety_critical": true
+  },
+  {
+    "id": "uber_gold_007",
+    "customer_message": "Was charged surge pricing 2.5x even though the upfront fare quote showed normal rate.",
+    "gold_intent": "fare_and_billing_dispute",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Address fare and billing dispute with proper Uber action path.",
+    "rationale": "Upfront fare vs surge dispute; guided through fare review flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_008",
+    "customer_message": "Can you please refund the toll charge? The driver avoided the toll road completely.",
+    "gold_intent": "fare_and_billing_dispute",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Address fare and billing dispute with proper Uber action path.",
+    "rationale": "Toll charge dispute; verified against GPS routing in-app.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_009",
+    "customer_message": "Driver called me and asked me to cancel the trip because he didn't want to go south, and I got charged $5 fee!",
+    "gold_intent": "cancellation_fee_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Address cancellation fee issue with proper Uber action path.",
+    "rationale": "Driver-requested cancellation; qualifies for automatic fee waiver via activity help.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_010",
+    "customer_message": "I cancelled within 45 seconds of requesting because ETA was too long, why was I charged cancellation fee?",
+    "gold_intent": "cancellation_fee_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Address cancellation fee issue with proper Uber action path.",
+    "rationale": "Cancellation grace period inquiry; self-service waiver available.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_011",
+    "customer_message": "Driver was sitting at the same spot for 15 minutes and never came, so I had to cancel. Refund my fee!",
+    "gold_intent": "cancellation_fee_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Address cancellation fee issue with proper Uber action path.",
+    "rationale": "Driver failure to progress; standard cancellation fee refund rule.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_012",
+    "customer_message": "Why do you keep charging cancellation fees when drivers refuse to turn on AC?",
+    "gold_intent": "cancellation_fee_issue",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Address cancellation fee issue with proper Uber action path.",
+    "rationale": "Recurring complaint involving driver service standards and dispute.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_013",
+    "customer_message": "I was charged two cancellation fees back to back because the app crashed while dispatching.",
+    "gold_intent": "cancellation_fee_issue",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Address cancellation fee issue with proper Uber action path.",
+    "rationale": "Multiple technical cancellation fees; requires agent review.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_014",
+    "customer_message": "Where in the app can I see if my cancellation fee was refunded?",
+    "gold_intent": "cancellation_fee_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Address cancellation fee issue with proper Uber action path.",
+    "rationale": "Status check self-service inquiry.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_015",
+    "customer_message": "Driver was driving 90mph on the highway in heavy rain and weaving between trucks, I felt terrified.",
+    "gold_intent": "driver_behavior_and_safety",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Address driver behavior and safety with proper Uber action path.",
+    "rationale": "Reckless driving safety violation; requires immediate safety incident escalation.",
+    "is_safety_critical": true
+  },
+  {
+    "id": "uber_gold_016",
+    "customer_message": "The driver started shouting obscenities at me when I asked him to turn down the radio.",
+    "gold_intent": "driver_behavior_and_safety",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Address driver behavior and safety with proper Uber action path.",
+    "rationale": "Verbal harassment by driver; requires driver conduct investigation.",
+    "is_safety_critical": true
+  },
+  {
+    "id": "uber_gold_017",
+    "customer_message": "I suspect my driver was under the influence of alcohol, he was slurring his words.",
+    "gold_intent": "driver_behavior_and_safety",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Address driver behavior and safety with proper Uber action path.",
+    "rationale": "Suspected intoxication; emergency safety tier 1 escalation.",
+    "is_safety_critical": true
+  },
+  {
+    "id": "uber_gold_018",
+    "customer_message": "Driver refused to drop me at my doorstep late at night and told me to get out on the main road.",
+    "gold_intent": "driver_behavior_and_safety",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Address driver behavior and safety with proper Uber action path.",
+    "rationale": "Drop-off safety violation; requires supervisor review.",
+    "is_safety_critical": true
+  },
+  {
+    "id": "uber_gold_019",
+    "customer_message": "Driver made inappropriate personal comments about my appearance and asked for my personal number.",
+    "gold_intent": "driver_behavior_and_safety",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Address driver behavior and safety with proper Uber action path.",
+    "rationale": "Sexual harassment violation; immediate human safety investigation.",
+    "is_safety_critical": true
+  },
+  {
+    "id": "uber_gold_020",
+    "customer_message": "Driver refused to start the trip unless I agreed to pay an extra 200 rupees cash off the app.",
+    "gold_intent": "driver_behavior_and_safety",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Address driver behavior and safety with proper Uber action path.",
+    "rationale": "Off-app cash extortion; driver policy violation.",
+    "is_safety_critical": true
+  },
+  {
+    "id": "uber_gold_021",
+    "customer_message": "I accidentally left my iPhone 13 in the back seat of the Honda Civic that dropped me at 8 PM.",
+    "gold_intent": "lost_item_inquiry",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Address lost item inquiry with proper Uber action path.",
+    "rationale": "Standard lost phone inquiry; immediate in-app driver contact guidance.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_022",
+    "customer_message": "Left my brown leather wallet containing my driver license and credit cards in the car!",
+    "gold_intent": "lost_item_inquiry",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Address lost item inquiry with proper Uber action path.",
+    "rationale": "Lost wallet; guided to in-app contact driver option.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_023",
+    "customer_message": "I left my work laptop bag in the trunk and the driver is not answering calls from the app.",
+    "gold_intent": "lost_item_inquiry",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Address lost item inquiry with proper Uber action path.",
+    "rationale": "Driver unresponsive regarding high-value lost item; requires agent intervention.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_024",
+    "customer_message": "Can Uber provide me the direct phone number of the driver? I left my house keys in the cab.",
+    "gold_intent": "lost_item_inquiry",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Address lost item inquiry with proper Uber action path.",
+    "rationale": "Privacy policy explanation + how anonymized calling works.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_025",
+    "customer_message": "Left my passport in the vehicle and my international flight is in 3 hours, please help fast!",
+    "gold_intent": "lost_item_inquiry",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Address lost item inquiry with proper Uber action path.",
+    "rationale": "Time-critical emergency lost travel document; urgent priority dispatch.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_026",
+    "customer_message": "Driver found my phone and returned it, how do I pay him the return reward fee?",
+    "gold_intent": "lost_item_inquiry",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Address lost item inquiry with proper Uber action path.",
+    "rationale": "Standard lost item return fee process.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_027",
+    "customer_message": "Driver took an absurdly long detour through heavy city traffic adding 30 minutes to the trip.",
+    "gold_intent": "pickup_and_route_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Address pickup and route issue with proper Uber action path.",
+    "rationale": "Inefficient route dispute; guided to in-app route review.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_028",
+    "customer_message": "The pickup pin placed the driver 3 blocks away across a closed highway barrier.",
+    "gold_intent": "pickup_and_route_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Address pickup and route issue with proper Uber action path.",
+    "rationale": "GPS location mismatch; troubleshooting pickup pin placement.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_029",
+    "customer_message": "Driver marked trip as completed before even reaching my destination!",
+    "gold_intent": "pickup_and_route_issue",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Address pickup and route issue with proper Uber action path.",
+    "rationale": "Early trip completion / incomplete ride complaint; requires trip audit.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_030",
+    "customer_message": "Driver went the opposite direction on the one-way street, GPS in app is completely broken.",
+    "gold_intent": "pickup_and_route_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Address pickup and route issue with proper Uber action path.",
+    "rationale": "Map routing error feedback; route review flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_031",
+    "customer_message": "Why does the app keep changing my pickup point after booking?",
+    "gold_intent": "pickup_and_route_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Address pickup and route issue with proper Uber action path.",
+    "rationale": "App pickup optimization explanation.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_032",
+    "customer_message": "My account was deactivated suddenly and I have no idea why. Please reactivate my account!",
+    "gold_intent": "app_and_account_support",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Address app and account support with proper Uber action path.",
+    "rationale": "Account deactivation appeal; requires human account review.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_033",
+    "customer_message": "I changed my phone number and now cannot receive the 2FA SMS code to sign in.",
+    "gold_intent": "app_and_account_support",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Address app and account support with proper Uber action path.",
+    "rationale": "Phone number update / login verification guidance via help.uber.com.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_034",
+    "customer_message": "Entered promo code SAVE50 before booking but the discount was not applied to my receipt.",
+    "gold_intent": "app_and_account_support",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Address app and account support with proper Uber action path.",
+    "rationale": "Promo code eligibility / receipt adjustment flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_035",
+    "customer_message": "App crashes every time I tap on Add Payment Method on my Samsung Galaxy S21.",
+    "gold_intent": "app_and_account_support",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Address app and account support with proper Uber action path.",
+    "rationale": "Technical app troubleshooting (cache clear, update).",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_036",
+    "customer_message": "I received an email that someone logged into my account from another country!",
+    "gold_intent": "app_and_account_support",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Address app and account support with proper Uber action path.",
+    "rationale": "Account takeover / security compromise; immediate security freeze.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_037",
+    "customer_message": "Is Uber service available in Honolulu Hawaii for early morning airport pickups?",
+    "gold_intent": "service_feedback_and_general",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Address service feedback and general with proper Uber action path.",
+    "rationale": "Operating cities & scheduled ride inquiry.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_038",
+    "customer_message": "Shoutout to driver Marcus in Chicago, he was courteous and returned my umbrella. Great service!",
+    "gold_intent": "service_feedback_and_general",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Address service feedback and general with proper Uber action path.",
+    "rationale": "Positive driver feedback acknowledgment.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_039",
+    "customer_message": "Can I request a child safety car seat with Uber in London?",
+    "gold_intent": "service_feedback_and_general",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Address service feedback and general with proper Uber action path.",
+    "rationale": "Service tier & policy inquiry (Uber Car Seat).",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_040",
+    "customer_message": "What is your policy on bringing service animals into vehicles?",
+    "gold_intent": "service_feedback_and_general",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Address service feedback and general with proper Uber action path.",
+    "rationale": "Official service animal accessibility policy.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_041",
+    "customer_message": "Do you offer student discounts or monthly ride passes?",
+    "gold_intent": "service_feedback_and_general",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Address service feedback and general with proper Uber action path.",
+    "rationale": "Uber One / ride pass product information.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_042",
+    "customer_message": "Yall.....uber tried to charge us $108 for a 25 min ass drive home tonight fuck wrong with y'all",
+    "gold_intent": "fare_and_billing_dispute",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle fare and billing dispute and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_043",
+    "customer_message": "Thanks for incorrectly charging me and only giving me half a refund. (Sarcasm btw) Seriously, I want a full refund.",
+    "gold_intent": "fare_and_billing_dispute",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle fare and billing dispute and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_044",
+    "customer_message": "Driver started the trip without us and completed it. we were charged money also . but no way to contact customer care too.",
+    "gold_intent": "fare_and_billing_dispute",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle fare and billing dispute and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_045",
+    "customer_message": "I\u2019ve waited nearly 8 hours for a respond on the help feature on the app. Bout to chargeback if no response soon",
+    "gold_intent": "fare_and_billing_dispute",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle fare and billing dispute and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_046",
+    "customer_message": "Hey your Apps is corrupt and useless, Already added Credit Cards is not displayed, and I hate PayTm, will not pay via. Fix it",
+    "gold_intent": "fare_and_billing_dispute",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle fare and billing dispute and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_047",
+    "customer_message": "can you please forward receipt &amp; invoices for trips in Johannesburg from 04.10 to 07.10.17.",
+    "gold_intent": "fare_and_billing_dispute",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle fare and billing dispute and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_048",
+    "customer_message": "Story of my life! The Driver also said to cancel as he doesn't want Paytm and can't choose cash in my acc :( [URL]",
+    "gold_intent": "fare_and_billing_dispute",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle fare and billing dispute and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_049",
+    "customer_message": "uber I WILL BE FILING MY COMPLAINTS AND I WILL APPRECIATE ALL MY MONEY BACK. I DO NOT APPRECIATE\u2026 [URL]",
+    "gold_intent": "fare_and_billing_dispute",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle fare and billing dispute and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_050",
+    "customer_message": "just messaged you regarding an overcharge",
+    "gold_intent": "fare_and_billing_dispute",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle fare and billing dispute and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_051",
+    "customer_message": "I was charged for a trip I didn't take how do I get this fixed?",
+    "gold_intent": "fare_and_billing_dispute",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle fare and billing dispute and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_052",
+    "customer_message": "Hey why is my ride being denied I have plenty of money and I'm stranded please help",
+    "gold_intent": "fare_and_billing_dispute",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle fare and billing dispute and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_053",
+    "customer_message": "i was charged an $80 cleaning fee without explanation or proof. All I received was an email stating that a mess was left",
+    "gold_intent": "fare_and_billing_dispute",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle fare and billing dispute and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_054",
+    "customer_message": "Overcharged by 2+ mi, but Customer service refuses to adjust the fair.",
+    "gold_intent": "fare_and_billing_dispute",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle fare and billing dispute and verify evidence.",
+    "rationale": "Contains safety, misconduct, or security grievance requiring human specialist triage.",
+    "is_safety_critical": true
+  },
+  {
+    "id": "uber_gold_055",
+    "customer_message": "You are making [URL] charged me 5 dollars for a trip that the driver canceled saying i wasnt in the location",
+    "gold_intent": "fare_and_billing_dispute",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle fare and billing dispute and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_056",
+    "customer_message": "Don\u2019t ever order shit from bc NOT ONLY will they *NOT* refund you your money when you cancel an order you didn\u2019t mean to make\u2014 [URL]",
+    "gold_intent": "fare_and_billing_dispute",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle fare and billing dispute and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_057",
+    "customer_message": "refund my money for a false cleaning fee NOW. I use the service everyday and have For two years without incident. #lyftrules",
+    "gold_intent": "fare_and_billing_dispute",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle fare and billing dispute and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_058",
+    "customer_message": "my aunt\u2019s card is being charged for rides we never took. Help!",
+    "gold_intent": "fare_and_billing_dispute",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle fare and billing dispute and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_059",
+    "customer_message": "don't order from them. There app double ordered a product, charged x2, and all I get are canned responses. [URL]",
+    "gold_intent": "fare_and_billing_dispute",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle fare and billing dispute and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_060",
+    "customer_message": "A trip i recently took charged me 2x one for the correct fare and the other one has been pending for 2 weeks. What do I do?",
+    "gold_intent": "fare_and_billing_dispute",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle fare and billing dispute and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_061",
+    "customer_message": "How do we contact you when you have really messed up an order and over charged?",
+    "gold_intent": "fare_and_billing_dispute",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle fare and billing dispute and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_062",
+    "customer_message": "Plz be careful of what Uber is charging for waiting fees. I was charged twice for a trip where I was waiting for drive #Uber #Cheater",
+    "gold_intent": "fare_and_billing_dispute",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle fare and billing dispute and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_063",
+    "customer_message": "I just got charged $8.30 for a ride that I never took. The driver canceled and I had to call a 2nd time to get 2 destination",
+    "gold_intent": "fare_and_billing_dispute",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle fare and billing dispute and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_064",
+    "customer_message": "I want my money back for the food I did not receive",
+    "gold_intent": "fare_and_billing_dispute",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle fare and billing dispute and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_065",
+    "customer_message": "ordered McDonald\u2019s from butterfly walk, half food missing, rest cold &amp; covered in spilt drink. Not happy. Refund me?",
+    "gold_intent": "fare_and_billing_dispute",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle fare and billing dispute and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_066",
+    "customer_message": "waited 10 min for driver and he cancelled for no reason. I'm now late and new driver is incompetent. What can u do to fix this",
+    "gold_intent": "cancellation_fee_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle cancellation fee issue and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_067",
+    "customer_message": "received a receipt which I cannot open for a cancelled trip today which the driver cancelled?",
+    "gold_intent": "cancellation_fee_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle cancellation fee issue and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_068",
+    "customer_message": "driver cancelled me due to traffic, unfortunately i was charged &amp; quoted driver waited for 2.50 min. Its completely nonsense.",
+    "gold_intent": "cancellation_fee_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle cancellation fee issue and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_069",
+    "customer_message": "Ordered sushi with , 1 hr later, no food and a cancelled order. Uber seem to think not being charged for this is compensation",
+    "gold_intent": "cancellation_fee_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle cancellation fee issue and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_070",
+    "customer_message": "$6 cancellation fee after 2 min, ? Do the GFY mean anything to you? #overcharging",
+    "gold_intent": "cancellation_fee_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle cancellation fee issue and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_071",
+    "customer_message": "standing outside, now they\u2019ve cancelled the order, took the money and we have no food? why offer a service if you can\u2019t provide it",
+    "gold_intent": "cancellation_fee_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle cancellation fee issue and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_072",
+    "customer_message": "my driver cancelled right in front of me. Wtf? I want $5 from his ass.",
+    "gold_intent": "cancellation_fee_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle cancellation fee issue and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_073",
+    "customer_message": "I cancelled an UberEats order last night before they started making my food. I still was charged. How do I get a refund?",
+    "gold_intent": "cancellation_fee_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle cancellation fee issue and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_074",
+    "customer_message": "so i was not able to appear for it then i cancelled ride but why i have been charged 42 bcoz of driver mistake??",
+    "gold_intent": "cancellation_fee_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle cancellation fee issue and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_075",
+    "customer_message": "hi I seem to have been charged a cancellation fee for a car that never accepted, looked on [URL] already",
+    "gold_intent": "cancellation_fee_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle cancellation fee issue and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_076",
+    "customer_message": ", I requested UberX last night, your app decided to request me UberXL, so I cancelled that request. Now you charge me $5?!",
+    "gold_intent": "cancellation_fee_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle cancellation fee issue and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_077",
+    "customer_message": "why amount should be debited when a trio is cancelled by driver ? New way of cheating customers During festive season ? [URL]",
+    "gold_intent": "cancellation_fee_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle cancellation fee issue and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_078",
+    "customer_message": "even though the driver cancelled the trip why am i being chrged the same. Plz help nd refund [URL]",
+    "gold_intent": "cancellation_fee_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle cancellation fee issue and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_079",
+    "customer_message": "At Lax, requested my . Driver called to ask where I was going, cancelled the trip, rate doubled. Deleted the uber app. Lyft it is.",
+    "gold_intent": "cancellation_fee_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle cancellation fee issue and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_080",
+    "customer_message": "your driver cancelled on me and i am being charged S$6? Sure.",
+    "gold_intent": "cancellation_fee_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle cancellation fee issue and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_081",
+    "customer_message": "why are there so many cancellations? in seattle? i got cancelled three times right before pick up!.. and the maps are bad!",
+    "gold_intent": "cancellation_fee_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle cancellation fee issue and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_082",
+    "customer_message": "my friend lost his laugage in a cancelled ride, plz provide an email ID or call my frnd saurabh @ 8600033846",
+    "gold_intent": "cancellation_fee_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle cancellation fee issue and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_083",
+    "customer_message": "already raised the complain in the help portal related to wrong cancellation fee charged. Pathetic help givin same replies",
+    "gold_intent": "cancellation_fee_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle cancellation fee issue and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_084",
+    "customer_message": "I have been cancelled on twice this week. These two Uber drivers accept rides while still on other trips [URL]",
+    "gold_intent": "cancellation_fee_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle cancellation fee issue and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_085",
+    "customer_message": "i shouldn\u2019t get charged for cancelling a ride when the driver refused to meet me at the pick up location.",
+    "gold_intent": "cancellation_fee_issue",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle cancellation fee issue and verify evidence.",
+    "rationale": "Contains safety, misconduct, or security grievance requiring human specialist triage.",
+    "is_safety_critical": true
+  },
+  {
+    "id": "uber_gold_086",
+    "customer_message": "Was charged for the cancellation fee of trip and I made the payment for it by card yet this message appears in the app #Help [URL]",
+    "gold_intent": "cancellation_fee_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle cancellation fee issue and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_087",
+    "customer_message": "So , one of your drivers accepted the ride, started it before getting here, then cancelled. I was still charged. So...",
+    "gold_intent": "cancellation_fee_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle cancellation fee issue and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_088",
+    "customer_message": "a driver cancelled after he could not find me and I get charged $5.15... they went on a bridge when we was on the road beside it",
+    "gold_intent": "cancellation_fee_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle cancellation fee issue and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_089",
+    "customer_message": "Frustrated with a driver cancellation? Here\u2019s how to solve an incorrect cancellation fee using Uber\u2019s in-app support [URL]",
+    "gold_intent": "cancellation_fee_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle cancellation fee issue and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_090",
+    "customer_message": "So my uber got into an accident today\ud83d\ude29 my poor knee.",
+    "gold_intent": "driver_behavior_and_safety",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle driver behavior and safety and verify evidence.",
+    "rationale": "Contains safety, misconduct, or security grievance requiring human specialist triage.",
+    "is_safety_critical": true
+  },
+  {
+    "id": "uber_gold_091",
+    "customer_message": "About 6weeks ago my cousin had an accident using went into coma 3days with a broken clavicle [URL]",
+    "gold_intent": "driver_behavior_and_safety",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle driver behavior and safety and verify evidence.",
+    "rationale": "Contains safety, misconduct, or security grievance requiring human specialist triage.",
+    "is_safety_critical": true
+  },
+  {
+    "id": "uber_gold_092",
+    "customer_message": "A big FU to the Uber driver who refused to allow my PTSD Service Dog in her car today when I was trying to get to my sick mother.",
+    "gold_intent": "driver_behavior_and_safety",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle driver behavior and safety and verify evidence.",
+    "rationale": "Contains safety, misconduct, or security grievance requiring human specialist triage.",
+    "is_safety_critical": true
+  },
+  {
+    "id": "uber_gold_093",
+    "customer_message": "your drivers need to stop playing music so loud and rudely in their cars.",
+    "gold_intent": "driver_behavior_and_safety",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle driver behavior and safety and verify evidence.",
+    "rationale": "Contains safety, misconduct, or security grievance requiring human specialist triage.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_094",
+    "customer_message": "Uber do cheating sometimes today I charged for Uber go however i booked for uber pool.9871224912 and refused for return. Shame on you",
+    "gold_intent": "driver_behavior_and_safety",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle driver behavior and safety and verify evidence.",
+    "rationale": "Contains safety, misconduct, or security grievance requiring human specialist triage.",
+    "is_safety_critical": true
+  },
+  {
+    "id": "uber_gold_095",
+    "customer_message": "I was in an accident while picking up a passenger please help",
+    "gold_intent": "driver_behavior_and_safety",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle driver behavior and safety and verify evidence.",
+    "rationale": "Contains safety, misconduct, or security grievance requiring human specialist triage.",
+    "is_safety_critical": true
+  },
+  {
+    "id": "uber_gold_096",
+    "customer_message": "Wait why is Bryans Uber driver drunk. Went into the gas station for twenty minutes &amp; has a beer in his cup holder???",
+    "gold_intent": "driver_behavior_and_safety",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle driver behavior and safety and verify evidence.",
+    "rationale": "Contains safety, misconduct, or security grievance requiring human specialist triage.",
+    "is_safety_critical": true
+  },
+  {
+    "id": "uber_gold_097",
+    "customer_message": "Two rides in past 10 days &amp; both drivers a nightmare.I'm sorry but safety &amp; honesty is a huge issue with their India drivers #redflag",
+    "gold_intent": "driver_behavior_and_safety",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle driver behavior and safety and verify evidence.",
+    "rationale": "Contains safety, misconduct, or security grievance requiring human specialist triage.",
+    "is_safety_critical": true
+  },
+  {
+    "id": "uber_gold_098",
+    "customer_message": "we were charged a bogus $20 \"accident\" fee by a driver in Pensacola, FL. Absolute false claim...need a refund.",
+    "gold_intent": "driver_behavior_and_safety",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle driver behavior and safety and verify evidence.",
+    "rationale": "Contains safety, misconduct, or security grievance requiring human specialist triage.",
+    "is_safety_critical": true
+  },
+  {
+    "id": "uber_gold_099",
+    "customer_message": "Could I speak to someone about my driver account? It got disabled accidentally.",
+    "gold_intent": "driver_behavior_and_safety",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle driver behavior and safety and verify evidence.",
+    "rationale": "Contains safety, misconduct, or security grievance requiring human specialist triage.",
+    "is_safety_critical": true
+  },
+  {
+    "id": "uber_gold_100",
+    "customer_message": "Man I'm already drunk as hell and work early asfuck and my Uber got pulled over",
+    "gold_intent": "driver_behavior_and_safety",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle driver behavior and safety and verify evidence.",
+    "rationale": "Contains safety, misconduct, or security grievance requiring human specialist triage.",
+    "is_safety_critical": true
+  },
+  {
+    "id": "uber_gold_101",
+    "customer_message": "apparently being nice to your uber driver is an invitation to be harassed!",
+    "gold_intent": "driver_behavior_and_safety",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle driver behavior and safety and verify evidence.",
+    "rationale": "Contains safety, misconduct, or security grievance requiring human specialist triage.",
+    "is_safety_critical": true
+  },
+  {
+    "id": "uber_gold_102",
+    "customer_message": "you actually suck, your drivers suck. All suck. I just bought a cab a for very drunk girl. She was sick out window and uber cab told",
+    "gold_intent": "driver_behavior_and_safety",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle driver behavior and safety and verify evidence.",
+    "rationale": "Contains safety, misconduct, or security grievance requiring human specialist triage.",
+    "is_safety_critical": true
+  },
+  {
+    "id": "uber_gold_103",
+    "customer_message": "had a ride we wanted to talk to you about. Our driver stopped to assist unrelated injury accident requiring 911. #raleigh",
+    "gold_intent": "driver_behavior_and_safety",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle driver behavior and safety and verify evidence.",
+    "rationale": "Contains safety, misconduct, or security grievance requiring human specialist triage.",
+    "is_safety_critical": true
+  },
+  {
+    "id": "uber_gold_104",
+    "customer_message": "Got into an accident in an uber should I sue?",
+    "gold_intent": "driver_behavior_and_safety",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle driver behavior and safety and verify evidence.",
+    "rationale": "Contains safety, misconduct, or security grievance requiring human specialist triage.",
+    "is_safety_critical": true
+  },
+  {
+    "id": "uber_gold_105",
+    "customer_message": "drivers try to be nice! Sure, but sometimes we just want silence, and I obviously don\u2019t want to be rude and ask her to stop talking.",
+    "gold_intent": "driver_behavior_and_safety",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle driver behavior and safety and verify evidence.",
+    "rationale": "Contains safety, misconduct, or security grievance requiring human specialist triage.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_106",
+    "customer_message": "Never ever call a fucking for a #drunk. Those bastards will charge you a fraudulent $150 dollars #cleaningfee. You'll thank me later",
+    "gold_intent": "driver_behavior_and_safety",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle driver behavior and safety and verify evidence.",
+    "rationale": "Contains safety, misconduct, or security grievance requiring human specialist triage.",
+    "is_safety_critical": true
+  },
+  {
+    "id": "uber_gold_107",
+    "customer_message": "Ordered an Uber from my house &amp; this random drunk girl was in the front\ud83d\ude29 I\u2019d be mad if she wasn\u2019t so funny\ud83d\ude02\ud83e\udd37\ud83c\udffb\u200d\u2640\ufe0f I still want a refund [URL]",
+    "gold_intent": "driver_behavior_and_safety",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle driver behavior and safety and verify evidence.",
+    "rationale": "Contains safety, misconduct, or security grievance requiring human specialist triage.",
+    "is_safety_critical": true
+  },
+  {
+    "id": "uber_gold_108",
+    "customer_message": "I never revived my food, and had a SUPER RUDE delivery, where he said I got my food, and you guys haven't contacted me yet! Grr",
+    "gold_intent": "driver_behavior_and_safety",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle driver behavior and safety and verify evidence.",
+    "rationale": "Contains safety, misconduct, or security grievance requiring human specialist triage.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_109",
+    "customer_message": "I feel awful! I accidentally rated my driver 1* when In fact he was wonderful! Please make sure Astrit knows it was a mistake \ud83d\ude11",
+    "gold_intent": "driver_behavior_and_safety",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle driver behavior and safety and verify evidence.",
+    "rationale": "Contains safety, misconduct, or security grievance requiring human specialist triage.",
+    "is_safety_critical": true
+  },
+  {
+    "id": "uber_gold_110",
+    "customer_message": "just had a disgusting and horrible experience with one of your drivers &amp; refused to get in. Better not have been charged for my ride!",
+    "gold_intent": "driver_behavior_and_safety",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle driver behavior and safety and verify evidence.",
+    "rationale": "Contains safety, misconduct, or security grievance requiring human specialist triage.",
+    "is_safety_critical": true
+  },
+  {
+    "id": "uber_gold_111",
+    "customer_message": "I\u2019m pretty sure my Uber Driver is drunk off his ass right now nearly took out a few mailboxes",
+    "gold_intent": "driver_behavior_and_safety",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle driver behavior and safety and verify evidence.",
+    "rationale": "Contains safety, misconduct, or security grievance requiring human specialist triage.",
+    "is_safety_critical": true
+  },
+  {
+    "id": "uber_gold_112",
+    "customer_message": "I was in a minor accident on the way back from Shrine cuz my Uber driver fell asleep and I was also sleeping backseat. 4AM. Osbourne. Bruh.",
+    "gold_intent": "driver_behavior_and_safety",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle driver behavior and safety and verify evidence.",
+    "rationale": "Contains safety, misconduct, or security grievance requiring human specialist triage.",
+    "is_safety_critical": true
+  },
+  {
+    "id": "uber_gold_113",
+    "customer_message": "one of your drivers is so RUDE!!! Shouting and screaming at us down the phone because HE was in the wrong place",
+    "gold_intent": "driver_behavior_and_safety",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle driver behavior and safety and verify evidence.",
+    "rationale": "Contains safety, misconduct, or security grievance requiring human specialist triage.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_114",
+    "customer_message": "I think I left my daughter's school bag in my ride on Friday afternoon. Can you check for me please.",
+    "gold_intent": "lost_item_inquiry",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle lost item inquiry and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_115",
+    "customer_message": "need to follow up a lost item that was returned to the greenlight hub for posting to the U.K. how do I get in touch?",
+    "gold_intent": "lost_item_inquiry",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle lost item inquiry and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_116",
+    "customer_message": "My driver couldn't find motherfucking GRAND CENTRAL TERMINAL, got lost and then gave me a bad rating. Unbelievable",
+    "gold_intent": "lost_item_inquiry",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle lost item inquiry and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_117",
+    "customer_message": "Why can't I sign in into my account without using my facebook. Lost my phone and when tried to resign, I no longer get email option.",
+    "gold_intent": "lost_item_inquiry",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle lost item inquiry and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_118",
+    "customer_message": "Does it take more than 2 days for Uber to contact ppl in re: to lost items? And a driver over charged me by continuing a trip. How do I get my refund?",
+    "gold_intent": "lost_item_inquiry",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle lost item inquiry and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_119",
+    "customer_message": "why should I be charged $5.00 for my uber cancelling on me because HE got lost and couldn't find me ??",
+    "gold_intent": "lost_item_inquiry",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle lost item inquiry and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_120",
+    "customer_message": "why is it when your drivers get lost cuz they dont know where theyre going I get charged more for a ride might want to look into that",
+    "gold_intent": "lost_item_inquiry",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle lost item inquiry and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_121",
+    "customer_message": "I forgot my phone in the uber how can I get it back",
+    "gold_intent": "lost_item_inquiry",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle lost item inquiry and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_122",
+    "customer_message": "how about making it possible to message in your apps. Just lost my dinner bc I'm visiting US &amp; live in Kenya so my # doesn't work here",
+    "gold_intent": "lost_item_inquiry",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle lost item inquiry and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_123",
+    "customer_message": "Hey , you guys haven't got back to my friends visiting NYC who lost there phone in Uber last night?",
+    "gold_intent": "lost_item_inquiry",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle lost item inquiry and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_124",
+    "customer_message": "left my phone in 1 of u cars &amp; i can see on find my iphone exactly where it is but you dont have a fucking contact number what do i do",
+    "gold_intent": "lost_item_inquiry",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle lost item inquiry and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_125",
+    "customer_message": "driver got lost three times. Had no idea where Much sway Airport was and wouldn\u2019t listen to my directions.",
+    "gold_intent": "lost_item_inquiry",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle lost item inquiry and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_126",
+    "customer_message": "hi Uber, i lost my phone in one of your cars in Paris. How can i get it back.",
+    "gold_intent": "lost_item_inquiry",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle lost item inquiry and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_127",
+    "customer_message": "HOW IS THERE NO SUPPORT NUMBER TO CALL I LOST MY WALLET AND CANT TALK TO AN ACTUAL FUCKING PERSON I HAD OVER $400 IN THERE",
+    "gold_intent": "lost_item_inquiry",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle lost item inquiry and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_128",
+    "customer_message": "Left my phone in uber car, I cannot contact uber because account has 2-step-verification, and driver has switch off my phone.",
+    "gold_intent": "lost_item_inquiry",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle lost item inquiry and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_129",
+    "customer_message": "Got to love to whent he Uber driver drives by you three times then cancels your ride and you get charged. Not my fault he is lost",
+    "gold_intent": "lost_item_inquiry",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle lost item inquiry and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_130",
+    "customer_message": "#UBER hey I left my bag in one of your uber car last week can you contact the driver for me...",
+    "gold_intent": "lost_item_inquiry",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle lost item inquiry and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_131",
+    "customer_message": "has officially lost my business\ud83d\ude12 #trash",
+    "gold_intent": "lost_item_inquiry",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle lost item inquiry and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_132",
+    "customer_message": "I reported the driver got lost w/my food Sunday &amp; I had proof &amp; u had the audacity to STILL take my $21 #DoBetter Grub Hub it is!",
+    "gold_intent": "lost_item_inquiry",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle lost item inquiry and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_133",
+    "customer_message": "Uber please DM me so resolve an ongoing lost itel dispute. This is very urgent as I need to retrieve my phone for work.",
+    "gold_intent": "lost_item_inquiry",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle lost item inquiry and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_134",
+    "customer_message": "my wife lost her shoe in the Uber and the driver Santos lied that there is no shoe, can Uber help us? We can drive anywhere to pick it",
+    "gold_intent": "lost_item_inquiry",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle lost item inquiry and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_135",
+    "customer_message": "Hey! I left my phone in my last ride. I can't track it down in other way since I have the two steps verification",
+    "gold_intent": "lost_item_inquiry",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle lost item inquiry and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_136",
+    "customer_message": "Left phone/ wallet inside uber after while it was connected to the driver's charger which he let me use. He won't respond. Help??",
+    "gold_intent": "lost_item_inquiry",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle lost item inquiry and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_137",
+    "customer_message": "you\u2019ve lost a customer #Uber. Tired of you charging me for rides I didn\u2019t take &amp; crappy service. Byeeee!",
+    "gold_intent": "lost_item_inquiry",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle lost item inquiry and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_138",
+    "customer_message": "Finding app to be buggy. #GPS frequently wrong &amp; double charging me for payments (that resulted from cancellation due to gps error) [URL]",
+    "gold_intent": "pickup_and_route_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle pickup and route issue and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_139",
+    "customer_message": "Are Uber drivers known for stopping suddenly &amp; saying \"get out if you want to\" when you ask them why they took a longer route?",
+    "gold_intent": "pickup_and_route_issue",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle pickup and route issue and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_140",
+    "customer_message": "I've been waiting forever for a NYC ride pass pls give it to me :(",
+    "gold_intent": "pickup_and_route_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle pickup and route issue and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_141",
+    "customer_message": "Freaking first it says pickup in 6 mins for about 10 mins and now it says 8 mins. Not good. Waiting.",
+    "gold_intent": "pickup_and_route_issue",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle pickup and route issue and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_142",
+    "customer_message": "so because my driver took a longer route &amp; got me to my destination 30 min late i had to pay extra? Thats totally unfair.",
+    "gold_intent": "pickup_and_route_issue",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle pickup and route issue and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_143",
+    "customer_message": "signed up to be a bicycle driver and the app has said successful sign up for 3 weeks now, but still waiting to be approved?",
+    "gold_intent": "pickup_and_route_issue",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle pickup and route issue and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_144",
+    "customer_message": "When your driver has his GPS on but still doesn't know how to get to the airport \ud83e\udd14",
+    "gold_intent": "pickup_and_route_issue",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle pickup and route issue and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_145",
+    "customer_message": "waiting for 2 weeks for someone to switch a phone number on the account. Please help.",
+    "gold_intent": "pickup_and_route_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle pickup and route issue and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_146",
+    "customer_message": "you have really bad drivers that always tell me to cancel. You also need to fix your GPS.",
+    "gold_intent": "pickup_and_route_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle pickup and route issue and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_147",
+    "customer_message": ", why your allocation give me cabs when driver is not willing to travel 7km ??",
+    "gold_intent": "pickup_and_route_issue",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle pickup and route issue and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_148",
+    "customer_message": "I dont get why i should have a deficit , for a driver who didnt show up , wasted my time ,kept lying about his location. [URL]",
+    "gold_intent": "pickup_and_route_issue",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle pickup and route issue and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_149",
+    "customer_message": "such unprofessional behaviour by cab driver. Neither he is coming to the location nor he is picking up my call. Pathetic service.",
+    "gold_intent": "pickup_and_route_issue",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle pickup and route issue and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_150",
+    "customer_message": "why did we have just have two guys cancel on us after waiting 10 minutes for each of their rides\ud83d\ude44",
+    "gold_intent": "pickup_and_route_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle pickup and route issue and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_151",
+    "customer_message": "what do I do if my uber app is telling me I'm still on a trip but I'm not? I arrived 10 minutes ago buy it still says I'm \"arriving\".",
+    "gold_intent": "pickup_and_route_issue",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle pickup and route issue and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_152",
+    "customer_message": "we'll be opening soon and we want to ensure our location on uber is tagged as our name. How do we do that?",
+    "gold_intent": "pickup_and_route_issue",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle pickup and route issue and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_153",
+    "customer_message": "When your Uber driver follows gps directions late and is over 65 years old. #prayforme [URL]",
+    "gold_intent": "pickup_and_route_issue",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle pickup and route issue and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_154",
+    "customer_message": "sent DM. Waiting for response",
+    "gold_intent": "pickup_and_route_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle pickup and route issue and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_155",
+    "customer_message": "still awaiting response to the issue raised [URL]",
+    "gold_intent": "pickup_and_route_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle pickup and route issue and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_156",
+    "customer_message": "we\u2019re waiting! #wtf",
+    "gold_intent": "pickup_and_route_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle pickup and route issue and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_157",
+    "customer_message": "ive been waiting almost an hour for my food when it originally said it'll be here within 20 mins. it has been \"prepping\" for 45 minutes now. how much longer is this going to be? order #25FB1. first time using ubereats and pretty disappointed",
+    "gold_intent": "pickup_and_route_issue",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle pickup and route issue and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_158",
+    "customer_message": "Fly every week out of PDX. Best airport in US but worst pickup. We\u2019re better than this in #Portland. #DoSomething",
+    "gold_intent": "pickup_and_route_issue",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle pickup and route issue and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_159",
+    "customer_message": "Uber driver asked me this morning how 2 get to my home when clearly his GPS was working &amp; he had my address right in front of him. #annoyed",
+    "gold_intent": "pickup_and_route_issue",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle pickup and route issue and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_160",
+    "customer_message": "So what do I do when your app says two minutes and you\u2019re waiting 11 minutes for a car",
+    "gold_intent": "pickup_and_route_issue",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle pickup and route issue and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_161",
+    "customer_message": "Is there a specific app drivers have that gives them the longest, most inconvenient route?",
+    "gold_intent": "pickup_and_route_issue",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle pickup and route issue and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_162",
+    "customer_message": "I tried to apply a promotional code but app said it is expired. But I use the code which uber (cont) [URL]",
+    "gold_intent": "app_and_account_support",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle app and account support and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_163",
+    "customer_message": "I'm having trouble with my account. I changed phone number and can't seem to login to my account",
+    "gold_intent": "app_and_account_support",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle app and account support and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_164",
+    "customer_message": "I sent my question (abt adding my daughter's referral code to my account) to uber online HELP link",
+    "gold_intent": "app_and_account_support",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle app and account support and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_165",
+    "customer_message": "have been trying to make an account for two days and I keep getting \u2018There was a problem signing up. Please try again\u2019 ????",
+    "gold_intent": "app_and_account_support",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle app and account support and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_166",
+    "customer_message": "hello pls look at your inbox for a message from me. Problem with my account",
+    "gold_intent": "app_and_account_support",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle app and account support and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_167",
+    "customer_message": "nice explanation for blocking my account and saying that its been done by system n u cant do anything to unblock it ...",
+    "gold_intent": "app_and_account_support",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle app and account support and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_168",
+    "customer_message": "how do i find my ubereats promo code? it doesn't show up",
+    "gold_intent": "app_and_account_support",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle app and account support and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_169",
+    "customer_message": "just want to know, regarding promo code,i recieved an sms, and how many days does expires the promo code?",
+    "gold_intent": "app_and_account_support",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle app and account support and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_170",
+    "customer_message": "My Uber India account has been disabled without citing any reason. It's been 2 weeks but no resolution by Uber India. Please help!",
+    "gold_intent": "app_and_account_support",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle app and account support and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_171",
+    "customer_message": "Feel so appreciated when threatens to flag my account for \"abuse\" of the support system because I wanted a question answered",
+    "gold_intent": "app_and_account_support",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle app and account support and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_172",
+    "customer_message": "Can't sign up - my email used by someone else to create an account. How can I fix this?",
+    "gold_intent": "app_and_account_support",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle app and account support and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_173",
+    "customer_message": "used a discount code, it said it worked but nothing happened? Help!",
+    "gold_intent": "app_and_account_support",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle app and account support and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_174",
+    "customer_message": "what is the account for Uber Mexico? regards",
+    "gold_intent": "app_and_account_support",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle app and account support and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_175",
+    "customer_message": "my $10 off code didn\u2019t work anyway I could get a credit? [URL]",
+    "gold_intent": "app_and_account_support",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle app and account support and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_176",
+    "customer_message": "hi could you please help with an account issue? I have DM the details for my account. Thank you!",
+    "gold_intent": "app_and_account_support",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle app and account support and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_177",
+    "customer_message": "I have got two promo codes expired just a day back. Pls extend!",
+    "gold_intent": "app_and_account_support",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle app and account support and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_178",
+    "customer_message": "Use of promo has been disabled in my account and I do not know how did it happen. I have not done anything against Uber terms",
+    "gold_intent": "app_and_account_support",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle app and account support and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_179",
+    "customer_message": "I am unable to add a promo code in the app. Why is this so?",
+    "gold_intent": "app_and_account_support",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle app and account support and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_180",
+    "customer_message": "The insurance on my vehicle is in my parents\u2019 names, but I am a driver on their account.",
+    "gold_intent": "app_and_account_support",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle app and account support and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_181",
+    "customer_message": "hey, could you unblock my account? I'm trying to book a ride and says my account is banned.",
+    "gold_intent": "app_and_account_support",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle app and account support and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_182",
+    "customer_message": "Remove me from ur deals, promos and marketing sms; stop spamming me sir im alreayd in Dnd list also",
+    "gold_intent": "app_and_account_support",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle app and account support and verify evidence.",
+    "rationale": "Routine self-service issue solvable via established in-app resolution flow.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_183",
+    "customer_message": "I dowloaded your app, I never got the code I was supposed to enter (Ecuador)",
+    "gold_intent": "app_and_account_support",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle app and account support and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_184",
+    "customer_message": "Hi, how can I change my surename in my account? I cannot acess the site \"[URL] That page doesn't open.",
+    "gold_intent": "app_and_account_support",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle app and account support and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_185",
+    "customer_message": "Locked out of account. Email address is no longer working. Help",
+    "gold_intent": "app_and_account_support",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle app and account support and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_186",
+    "customer_message": "I want to talk to someone immediately. I am so upset and the customer service from your company is the worst I've ever had!",
+    "gold_intent": "service_feedback_and_general",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle service feedback and general and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_187",
+    "customer_message": "Why'd my uber get further away? Why'd my driver earlier tell me he forgot to wear his glasses? get your shit b4 I sue for endangerment [URL]",
+    "gold_intent": "service_feedback_and_general",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle service feedback and general and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_188",
+    "customer_message": "Just had an Uber driver who was smashing a bud light pounder and texting while driving me in Syracuse.",
+    "gold_intent": "service_feedback_and_general",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle service feedback and general and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_189",
+    "customer_message": "Thanks to our pool driver who got within ten feet of us then bailed because there was traffic.",
+    "gold_intent": "service_feedback_and_general",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle service feedback and general and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_190",
+    "customer_message": "Did uber go away the ability to select what greater areas of the state we can drive in? I used to be able to exclude Boston.",
+    "gold_intent": "service_feedback_and_general",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle service feedback and general and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_191",
+    "customer_message": "An addition of two characters can make #UberEats turn to #uberCHeats... It rhymes too...",
+    "gold_intent": "service_feedback_and_general",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle service feedback and general and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_192",
+    "customer_message": "My uber driver asked me if I got weed \ud83d\ude12 fuck outta here",
+    "gold_intent": "service_feedback_and_general",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle service feedback and general and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_193",
+    "customer_message": "just changed my card and now I cant cash out?",
+    "gold_intent": "service_feedback_and_general",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle service feedback and general and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_194",
+    "customer_message": "my vehicle inspection form is supposed to expire in 2 days but I only plan to do UberEATS do I still have to do it again?",
+    "gold_intent": "service_feedback_and_general",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle service feedback and general and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_195",
+    "customer_message": "dm can't request",
+    "gold_intent": "service_feedback_and_general",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle service feedback and general and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_196",
+    "customer_message": "Can you help me locate an Uber driver in Lexington, KY named Tyler? I left something in his car!",
+    "gold_intent": "service_feedback_and_general",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle service feedback and general and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_197",
+    "customer_message": "Touched inappropriately by two men this week - uber driver &amp; a leafleter. How many more times?!?! - DO NOT TOUCH PEOPLE WITHOUT CONSENT FFS",
+    "gold_intent": "service_feedback_and_general",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle service feedback and general and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_198",
+    "customer_message": "My Uber eats don\u2019t work. How the hell am I supposed to get food",
+    "gold_intent": "service_feedback_and_general",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle service feedback and general and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_199",
+    "customer_message": "contact sucks. They take forever to get back to you. Only using from now on.",
+    "gold_intent": "service_feedback_and_general",
+    "gold_decision": "AUTO_HANDLE",
+    "expected_response_guideline": "Accurately handle service feedback and general and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  },
+  {
+    "id": "uber_gold_200",
+    "customer_message": "please bring your services to Salem, MA. I would 100% work for you. And I know so many businesses would benefit.",
+    "gold_intent": "service_feedback_and_general",
+    "gold_decision": "ESCALATE_TO_HUMAN",
+    "expected_response_guideline": "Accurately handle service feedback and general and verify evidence.",
+    "rationale": "General customer inquiry assessed on complexity and evidence availability.",
+    "is_safety_critical": false
+  }
+]
